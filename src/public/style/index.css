@@ -28,7 +28,6 @@ body {
   background-image: url("../assets/images/garage.jpg");
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   padding: .5rem 0 2rem 0;
 }
 
