@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "npm-run-all build:*",
-    "build:html": "mkdirp ./dist && copyfiles --flat ./src/html/index.html ./dist",
+    "build:html": "mkdirp ./dist && copyfiles --flat ./src/index.html ./dist",
     "build:sass": "node-sass -o ./dist/public/style ./src/public/style/index.scss",
     "build:images": "imagemin ./src/public/assets/images/* --out-dir=dist/public/assets/images",
     "build:js-compile": "mkdirp ./dist/public/js && babel ./src/public/js/index.js --out-file ./dist/public/js/index.js"
