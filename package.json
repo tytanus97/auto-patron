@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts": {
     "build": "npm-run-all build:*",
-    "build:html": "mkdir ./dist; mkdir .dist/html; copyfiles --flat ./src/html/index.html ./dist/html",
+    "build:html": "mkdirp ./dist/html && copyfiles --flat ./src/html/index.html ./dist/html",
     "build:sass": "node-sass -o ./dist/public/style ./src/public/style/index.scss",
     "build:images": "imagemin ./src/public/assets/images/* --out-dir=dist/public/assets/images",
-    "build:js-compile": "mkdir ./dist/public/js; babel ./src/public/js/index.js --out-file ./dist/public/js/index.js"
+    "build:js-compile": "mkdirp ./dist/public/js && babel ./src/public/js/index.js --out-file ./dist/public/js/index.js"
   },
   "repository": {
     "type": "git",
