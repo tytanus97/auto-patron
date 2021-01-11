@@ -334,18 +334,6 @@ body {
   width: 3rem;
 }
 
-.contact #attr {
-  font-size: .6rem;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.contact #attr a {
-  text-decoration: none;
-  color: #008891;
-}
-
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,6 +348,19 @@ footer {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: .2rem;
   padding: 1rem;
+  position: relative;
+}
+
+footer #attr {
+  font-size: .6rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+footer #attr a {
+  text-decoration: none;
+  color: #008891;
 }
 
 @-webkit-keyframes title-border {
