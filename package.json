@@ -4,9 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "npm install",
-    "start": "node src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm-run-all build:*",
+    "build:html": "mkdir ./dist/html ; copyfiles --flat ./src/html/index.html ./dist/html",
+    "build:sass": "node-sass -o ./dist/public/style ./src/public/style/index.scss",
+    "build:images": "imagemin ./src/public/assets/images/* --out-dir=dist/public/assets/images",
+    "build:js-compile": "mkdir ./dist/public/js; babel ./src/public/js/index.js --out-file ./dist/public/js/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,13 @@
   },
   "homepage": "https://github.com/tytanus97/auto-patron#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "copyfiles": "^2.4.1",
+    "express": "^4.17.1",
+    "imagemin-cli": "^6.0.0",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5"
   }
 }
