@@ -9,8 +9,7 @@
   padding: 0;
 }
 
-html,
-body {
+html,body {
   box-sizing: border-box;
   font-size: 16px;
   --color-th-green: #008891;
@@ -23,63 +22,13 @@ body {
   letter-spacing: 0.3rem;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  height: 12vh;
-  color: white;
-  background-color: var(--color-th-bg);
-  border-bottom: 1px solid black;
-
-  img {
-    width: 300px;
-    margin: 0.5rem 0;
-    &:hover {
-      transform:rotateY(360deg);
-      transition:transform 1s ease-in-out;
-    }
-  }
-  .btn-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    .btn {
-      display: flex;
-      width: calc(100% / 3);
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      letter-spacing: 0.1rem;
-      span {
-        position: relative;
-        &:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          border-bottom: 3px solid #008891;
-          transform: scaleX(0);
-        }
-      }
-      &:hover {
-        background-color: #394866;
-        transition: background-color.5s ease-in;
-        span:before {
-          transform: scaleX(1);
-          transition: transform 0.2s ease-out;
-        }
-      }
-    }
-  }
-}
 .content-main {
   width: 100%;
   background-image: url("../assets/images/garage.jpg");
   background-position: center;
   background-size: cover;
-  padding: 2rem 0;
+  background-attachment: fixed;
+  padding: .5rem 0 2rem 0;
 
   & > h1 {
     display: block;
@@ -103,14 +52,14 @@ header {
       }
     }
   }
-
-  h4 {
-    margin-top: 0.3rem;
-    color: white;
-    letter-spacing: 0.15rem;
+  .logo {
+    display:block;
     text-align: center;
-    font-size: 1.2rem;
+    img {
+      width:9rem; 
+    }
   }
+  
 
   .main-wrapper {
     margin-top: 2rem;
@@ -287,7 +236,7 @@ header {
   }
 
   .offer-list {
-    padding: 2rem 2rem 2rem 5rem;
+    margin: 2rem 2rem 2rem 3rem;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: normal;
@@ -309,7 +258,7 @@ header {
 
   .location {
     padding: 1rem;
-  
+    margin-left:3rem;
     p:nth-child(1) {
       color:white;
       font-size:1.5rem;
@@ -326,6 +275,39 @@ header {
     iframe {
       width:500px;
       height:500px;
+      border-radius:10px;
+    }
+  }
+}
+
+.contact {
+  color:white;
+  padding:2rem;
+  border-bottom:1px solid black;
+  font-family:  Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing:.1rem;
+  text-align: center;
+  position:relative;
+  p {
+    margin:1rem 0;
+  }
+
+  .social-media {
+    #fb {
+      width:3rem;
+    }
+    #ig {
+      width:3rem;
+    }
+  }
+  #attr {
+    font-size:.6rem;
+    position:absolute;
+    bottom:0;
+    right:0;
+    a {
+      text-decoration: none;
+      color:#008891;
     }
   }
 }

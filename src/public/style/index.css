@@ -9,8 +9,7 @@
   padding: 0;
 }
 
-html,
-body {
+html, body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 16px;
@@ -24,96 +23,13 @@ body {
   letter-spacing: 0.3rem;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 12vh;
-  color: white;
-  background-color: var(--color-th-bg);
-  border-bottom: 1px solid black;
-}
-
-header img {
-  width: 300px;
-  margin: 0.5rem 0;
-}
-
-header img:hover {
-  -webkit-transform: rotateY(360deg);
-          transform: rotateY(360deg);
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
-}
-
-header .btn-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-}
-
-header .btn-container .btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: calc(100% / 3);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 1.3rem;
-  letter-spacing: 0.1rem;
-}
-
-header .btn-container .btn span {
-  position: relative;
-}
-
-header .btn-container .btn span:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-bottom: 3px solid #008891;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-}
-
-header .btn-container .btn:hover {
-  background-color: #394866;
-  -webkit-transition: background-color 0.5s ease-in;
-  transition: background-color 0.5s ease-in;
-}
-
-header .btn-container .btn:hover span:before {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transition: -webkit-transform 0.2s ease-out;
-  transition: -webkit-transform 0.2s ease-out;
-  transition: transform 0.2s ease-out;
-  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
-}
-
 .content-main {
   width: 100%;
   background-image: url("../assets/images/garage.jpg");
   background-position: center;
   background-size: cover;
-  padding: 2rem 0;
+  background-attachment: fixed;
+  padding: .5rem 0 2rem 0;
 }
 
 .content-main > h1 {
@@ -142,12 +58,13 @@ header .btn-container .btn:hover span:before {
           transform: scaleX(0);
 }
 
-.content-main h4 {
-  margin-top: 0.3rem;
-  color: white;
-  letter-spacing: 0.15rem;
+.content-main .logo {
+  display: block;
   text-align: center;
-  font-size: 1.2rem;
+}
+
+.content-main .logo img {
+  width: 9rem;
 }
 
 .content-main .main-wrapper {
@@ -351,7 +268,7 @@ header .btn-container .btn:hover span:before {
 }
 
 .section-wrapper .offer-list {
-  padding: 2rem 2rem 2rem 5rem;
+  margin: 2rem 2rem 2rem 3rem;
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: normal;
@@ -372,6 +289,7 @@ header .btn-container .btn:hover span:before {
 
 .section-wrapper .location {
   padding: 1rem;
+  margin-left: 3rem;
 }
 
 .section-wrapper .location p:nth-child(1) {
@@ -391,6 +309,41 @@ header .btn-container .btn:hover span:before {
 .section-wrapper .location iframe {
   width: 500px;
   height: 500px;
+  border-radius: 10px;
+}
+
+.contact {
+  color: white;
+  padding: 2rem;
+  border-bottom: 1px solid black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: .1rem;
+  text-align: center;
+  position: relative;
+}
+
+.contact p {
+  margin: 1rem 0;
+}
+
+.contact .social-media #fb {
+  width: 3rem;
+}
+
+.contact .social-media #ig {
+  width: 3rem;
+}
+
+.contact #attr {
+  font-size: .6rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.contact #attr a {
+  text-decoration: none;
+  color: #008891;
 }
 
 footer {
