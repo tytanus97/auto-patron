@@ -328,6 +328,10 @@ body {
   position: relative;
 }
 
+.contact p {
+  margin-top: .5rem;
+}
+
 .contact .social-media {
   margin-top: 1em;
 }
@@ -358,7 +362,7 @@ footer {
 }
 
 footer #attr {
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   position: absolute;
   bottom: 0;
   right: 0;
