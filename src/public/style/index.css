@@ -440,7 +440,7 @@ footer #attr a {
     width: 100%;
   }
   .section-wrapper .location iframe {
-    min-height: initial;
+    min-height: 250px;
   }
   .contact p {
     font-size: 0.5rem;
