@@ -529,6 +529,11 @@ media queries
       .offer-item {
         width: 100%;
         min-width: initial;
+
+        &:before {
+          background: gray;
+          opacity:0.5;
+        }
       }
     }
   }

@@ -742,6 +742,10 @@ media queries
     width: 100%;
     min-width: initial;
   }
+  .content-offer .offer .offer-item:before {
+    background: gray;
+    opacity: 0.5;
+  }
   .section-wrapper .offer-list {
     font-size: 0.7rem;
   }

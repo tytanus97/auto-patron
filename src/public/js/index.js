@@ -35,7 +35,7 @@ window.addEventListener("load", (event) => {
   const fadeInObserver = new IntersectionObserver((entries, observer) => {
     for (entry of entries) {
       if (!entry.isIntersecting) {
-        return;
+        continue;
       } else if (entry.isIntersecting) {
         console.log(entry.target, "is intersecting");
         entry.target.classList.add(elementClassMap.get(entry.target)[0]);
@@ -48,13 +48,3 @@ window.addEventListener("load", (event) => {
     fadeInObserver.observe(key);
   }
 });
-
-window.addEventListener("resize", (event) => {
-  console.log(event);
-  console.log(event.target.innerHeight);
-  console.log(event.target.innerWidth);
-});
-
-console.log(window.navigator.platform);
-console.log(window.navigator.appCodeName);
-window.navigator.vibrate(5000);
