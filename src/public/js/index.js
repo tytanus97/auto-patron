@@ -57,4 +57,4 @@ window.addEventListener("resize", (event) => {
 
 console.log(window.navigator.platform);
 console.log(window.navigator.appCodeName);
-window.navigator.vibrate(200);
+window.navigator.vibrate(5000);
