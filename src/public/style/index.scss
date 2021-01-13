@@ -28,7 +28,8 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
+  background-attachment: fixed;
+  min-height:100vh;
 
   .title-wrapper {
     width: 100%;
@@ -70,7 +71,8 @@ body {
 
   .main-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    align-items:center;
     padding: 2rem;
     justify-content: space-evenly;
     .perk {
@@ -78,12 +80,11 @@ body {
       color: white;
       width: 30%;
       min-width: 300px;
-      height: 50%;
-      display: inline-block;
+      min-height: 12rem;
       text-align: center;
-
       margin: 1em;
       padding: 0.5em;
+      opacity:0;
 
       &:after {
         z-index: 1;
@@ -156,8 +157,8 @@ body {
   background-position: center;
   background-attachment: fixed;
   border-top: 3px solid #008891;
+  min-height:50vh;
   padding: 0.5em;
-
   .offer-header {
     width: 100%;
     margin-bottom: 1em;
@@ -194,6 +195,7 @@ body {
       position: relative;
       background: inherit;
       box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+      opacity:0;
 
       h2 {
         margin-bottom: 0.5em;
@@ -325,7 +327,49 @@ footer {
   }
 }
 
-//----------keyframes
+.fade-in-center {
+  animation: fade-in-center 1s ease-out 0s forwards; 
+}
+
+.fade-in-left {
+   animation: fade-in-left 1s ease-out 0s forwards; 
+}
+
+.fade-in-right {
+  animation: fade-in-right 1s ease-out 0s forwards;
+}
+
+.fade-in-top {
+  animation: fade-in-top 1s ease-out 0s forwards;
+}
+
+.fade-in-bottom {
+  animation: fade-in-bottom 1s ease-out 0s forwards;
+}
+
+.fade-out-center {
+  animation: fade-out-center 1s ease-out 0s forwards; 
+}
+
+.fade-out-left {
+  animation: fade-out-left 1s ease-out 0s forwards; 
+}
+
+.fade-out-right {
+ animation: fade-out-right 1s ease-out 0s forwards;
+}
+
+.fade-out-top {
+ animation: fade-out-top 1s ease-out 0s forwards;
+}
+
+.fade-out-bottom {
+ animation: fade-out-bottom 1s ease-out 0s forwards;
+}
+
+/*--------------------
+key frames
+---------------------*/
 @keyframes title-border {
   0% {
     transform: scaleX(0);
@@ -344,6 +388,112 @@ footer {
   }
 }
 
+@keyframes fade-in-left {
+  from {
+    opacity:0;
+    transform:translateX(-100%);
+  }
+  to {
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+@keyframes fade-in-right {
+  from {
+    opacity:0;
+    transform:translateX(100%);
+  }
+  to {
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
+@keyframes fade-in-top {
+  from {
+    opacity:0;
+    transform:translateY(-100%);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+@keyframes fade-in-bottom {
+  from {
+    opacity:0;
+    transform:translateY(50%);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+@keyframes fade-out-left {
+  from {
+    opacity:1;
+    transform:translateX(0);
+  }
+  to {
+    opacity:0;
+    transform:translateX(-100%);
+  }
+}
+@keyframes fade-out-right {
+  from {
+    opacity:1;
+    transform:translateX(0);
+  }
+  to {
+    opacity:0;
+    transform:translateX(100%);
+  }
+
+}
+@keyframes fade-out-top {
+  from {
+    opacity:1;
+    transform:translateY(0);
+  }
+  to {
+    opacity:0;
+    transform:translateY(-100%);
+  }
+}
+@keyframes fade-out-bottom {
+  from {
+    opacity:1;
+    transform:translateY(0);
+  }
+  to {
+    opacity:0;
+    transform:translateY(100%);
+  }
+}
+
+@keyframes fade-in-center {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+@keyframes fade-out-center {
+  from {
+    opacity:1;
+  }
+  to {
+    opacity:0;
+  }
+}
+
+
+
+/*--------------------
+media queries
+---------------------*/
 @media (max-width: 760px) {
   .content-main {
     .title-wrapper span.title > h1 {
