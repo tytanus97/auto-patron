@@ -31,6 +31,16 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .content-main .title-wrapper {
@@ -57,8 +67,10 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: -1%;
+  left: 0;
   right: 0;
+  bottom: 0;
+  left: -1%;
   bottom: 5px;
   border-bottom: 4px solid white;
   -webkit-transform: scaleX(0);
@@ -80,6 +92,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 70%;
   -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse;
   -webkit-box-align: center;
@@ -96,7 +109,7 @@ body {
   color: white;
   width: 30%;
   min-width: 300px;
-  min-height: 12rem;
+  min-height: 300px;
   text-align: center;
   margin: 1em;
   padding: 0.5em;
@@ -107,9 +120,9 @@ body {
   z-index: 1;
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   content: "";
   background-size: cover;
   background-position: center;
@@ -119,9 +132,9 @@ body {
 .content-main .main-wrapper .perk:before {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   content: "";
 }
 
@@ -196,17 +209,18 @@ body {
 }
 
 .content-offer .offer {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 70%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: center;
@@ -241,9 +255,9 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   -webkit-filter: blur(5px);
           filter: blur(5px);
   background: inherit;
@@ -269,12 +283,12 @@ body {
 }
 
 .section-wrapper:before {
-  position: absolute;
   content: "";
+  position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   background: linear-gradient(217deg, #008891, rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, #222831, rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
   z-index: -1;
   background-attachment: fixed;

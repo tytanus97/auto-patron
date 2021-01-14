@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 
+@mixin pseudoAbsotule {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -30,6 +38,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height:100vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 
   .title-wrapper {
     width: 100%;
@@ -49,10 +60,9 @@ body {
       }
       &:before {
         content: "";
-        position: absolute;
-        top: 0;
+
+        @include pseudoAbsotule();
         left: -1%;
-        right: 0;
         bottom: 5px;
         border-bottom: 4px solid white;
         transform: scaleX(0);
@@ -71,6 +81,7 @@ body {
 
   .main-wrapper {
     display: flex;
+    width:70%;
     flex-wrap: wrap-reverse;
     align-items:center;
     padding: 2rem;
@@ -80,7 +91,7 @@ body {
       color: white;
       width: 30%;
       min-width: 300px;
-      min-height: 12rem;
+      min-height: 300px;
       text-align: center;
       margin: 1em;
       padding: 0.5em;
@@ -88,22 +99,14 @@ body {
 
       &:after {
         z-index: 1;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+       @include pseudoAbsotule();
         content: "";
         background-size: cover;
         background-position: center;
         opacity: 0.5;
       }
       &:before {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        @include pseudoAbsotule();
         content: "";
       }
       h1 {
@@ -173,10 +176,11 @@ body {
     }
   }
   .offer {
+    margin:0 auto;
     display: flex;
-    width: 100%;
+    width:70%;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     color: white;
@@ -203,11 +207,7 @@ body {
 
       &:before {
         content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        @include pseudoAbsotule();
         filter: blur(5px);
         background: inherit;
 
@@ -227,12 +227,8 @@ body {
   z-index: 1;
   padding: 1em;
   &:before {
-    position: absolute;
     content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    @include pseudoAbsotule();
     background: linear-gradient(217deg, #008891, rgba(255, 0, 0, 0) 70.71%),
       linear-gradient(127deg, #222831, rgba(0, 255, 0, 0) 70.71%),
       linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
