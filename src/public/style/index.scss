@@ -215,6 +215,30 @@ body {
       }
     }
   }
+
+  .rodo {
+    margin-top:2rem;
+    display:block;
+    text-align:center;
+    .show-rodo-btn {
+      color:white;
+      background-color:transparent;
+      border:2px solid white;
+      width:200px;
+      height:50px;
+      font-size:1rem;
+      font-weight: bolder;
+
+      &:hover,&:focus {
+        transition-property: background-color,color;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+
+        color:black;
+        background-color: white;
+      }
+    }
+  }
 }
 
 .section-wrapper {
@@ -319,6 +343,64 @@ footer {
     a {
       text-decoration: none;
       color: #008891;
+    }
+  }
+}
+
+.modal {
+  display:none;
+  width:100%;
+  height:100%;
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:1;
+  background-color:rgba(0,0,0,0.6);
+
+  .modal-content-wrapper {
+    color:black;
+    background-color:white;
+    width:500px;
+    height:600px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: normal;
+    border-radius:10px;
+    margin:auto auto;
+    padding:0;
+    position:relative;
+    .modal-content {
+     padding:1rem;
+     padding-left:1.5rem;
+     overflow-y:scroll;
+      height:95%;
+    }
+   
+    h2 {
+      margin:1rem;
+      text-align:center;
+    }
+    ol {
+      li {
+        margin:.5rem 0;
+      }
+      ul {
+        list-style-position: inside;
+      }
+    }
+
+    .close-modal {
+      border-radius:50%;
+      width:2rem;
+      height:2rem;
+      background-color: grey;
+      color:white;
+      position:absolute;
+      top:0;
+      right:0;
+      transform:translateX(50%);
+      z-index:2;
     }
   }
 }

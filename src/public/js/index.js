@@ -47,4 +47,27 @@ window.addEventListener("load", (event) => {
   for ([key, val] of elementClassMap) {
     fadeInObserver.observe(key);
   }
+
+  initModalLogic();
 });
+
+function initModalLogic() {
+
+  const rodoBtn = document.querySelector('.show-rodo-btn');
+  const modal = document.querySelector('.modal');
+  const closeModalBtn = document.querySelector('.close-modal');
+  const hideModalCallback = (event) => {
+    modal.style.display = 'none';
+  }
+
+  rodoBtn.addEventListener('click', (event) => {
+    modal.style.display = 'flex';
+  });
+
+  closeModalBtn.addEventListener('click', hideModalCallback);
+
+  modal.addEventListener('click',hideModalCallback);
+
+ 
+
+}
